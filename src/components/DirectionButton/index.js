@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { toDirection } from '../../store/actions';
+import { toDirection, arrowDirection } from '../../store/actions';
 
 
 const DirectionButton = (props) => {
@@ -12,6 +12,7 @@ const DirectionButton = (props) => {
   id={props.directionId}
   onClick={()=>{
       dispatch(toDirection(props.directionId))
+      dispatch(arrowDirection(props.arrow))
   }} 
   >
     {props.textDirection}

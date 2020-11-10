@@ -4,12 +4,12 @@ import React from 'react';
 
 // == Import
 import './styles.css';
-import NbColors from '../NbColors';
-import Controls from '../Controls';
-import Colors from '../Colors';
+import NbColors from '../../container/NbColors';
+import Controls from '../../container/Controls';
+import Colors from '../../container/Colors';
 import ColorsCSS from '../ColorsCSS';
 
-import Gradient from '../Gradient';
+import Gradient from '../../container/Gradient';
 import DirectionButton from '../DirectionButton';
 
 
@@ -24,12 +24,12 @@ const App = () => (
     <Gradient />
 
     <div className="buttons group">
-      <DirectionButton textDirection='to right' directionId ='90deg'  />
-      <DirectionButton textDirection='45deg' directionId ='45deg'   />
-      <DirectionButton textDirection='135 deg' directionId ='135deg' />
-      <DirectionButton textDirection='225 deg' directionId ='225deg' />
-      <DirectionButton textDirection='315deg' directionId ='315deg'  />
-      <DirectionButton textDirection='to left' directionId ='275deg' />
+      <DirectionButton textDirection='to right' directionId ='90deg'  arrow='→'  />
+      <DirectionButton textDirection='45deg' directionId ='45deg'  arrow='↗' />
+      <DirectionButton textDirection='135 deg' directionId ='135deg' arrow='↘' />
+      <DirectionButton textDirection='225 deg' directionId ='225deg' arrow='↙' />
+      <DirectionButton textDirection='315deg' directionId ='315deg' arrow='↖'  />
+      <DirectionButton textDirection='to left' directionId ='275deg' arrow='←' />
     </div>
     <ColorsCSS />
   </div>

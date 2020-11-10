@@ -1,12 +1,8 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { randomHexColor } from '../../utils';
-import { randFirst, randLast } from '../../store/actions';
-import { useSelector } from 'react-redux'
 
 
-const Controls = () => {
-  const direction = useSelector((state) => state.direction)
+const Controls = ({randFirst, randLast, direction}) => {
 
   if(direction == '90deg' ||direction =='45deg' ||direction =='135deg' ){
     return  <div className="buttons group">
@@ -15,7 +11,7 @@ const Controls = () => {
       className="button"
       id="randFirst"
       onClick={() => {
-        dispatch(randFirst(randomHexColor()));
+        randFirst();
       }}
     >
       Random First
@@ -23,15 +19,15 @@ const Controls = () => {
     <button className="button" 
     id="randAll"
     onClick={() => {
-        dispatch(randFirst(randomHexColor()))
-        dispatch(randLast(randomHexColor()))
+        randFirst();
+       randLast();
     }}>
       Random All
     </button>
     <button className="button" 
     id="randLast"
     onClick={() => {
-        dispatch(randLast(randomHexColor()))
+       randLast();
     }}>
       Random Last
     </button>
@@ -41,7 +37,7 @@ const Controls = () => {
       <button className="button" 
       id="randLast"
       onClick={() => {
-          dispatch(randLast(randomHexColor()))
+         randLast();
       }}>
         Random Last
       </button>
@@ -49,8 +45,8 @@ const Controls = () => {
       <button className="button" 
       id="randAll"
       onClick={() => {
-          dispatch(randFirst(randomHexColor()))
-          dispatch(randLast(randomHexColor()))
+          randFirst();
+         randLast();
       }}>
         Random All
       </button>
@@ -58,7 +54,7 @@ const Controls = () => {
         className="button"
         id="randFirst"
         onClick={() => {
-          dispatch(randFirst(randomHexColor()));
+          randFirst();
         }}
       >
         Random First
