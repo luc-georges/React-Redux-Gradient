@@ -10,9 +10,9 @@ export const toDirection = (value) => ({
   value,
 });
 
-export const arrowDirection = (value) => ({
-  type: TO_DIRECTION,
-  value,
+export const arrowDirection = (arrow) => ({
+  type: ARROW_DIRECTION,
+  arrow,
 });
 
 export const randFirst = (color) => ({

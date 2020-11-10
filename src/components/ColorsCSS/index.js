@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
 import './style.scss'
 
 
-const ColorsCSS = () => {
-  const direction = useSelector((state) => state.direction)
-  const firstColor = useSelector((state) => state.firstColor)
-  const lastColor = useSelector((state) => state.lastColor)
+const ColorsCSS = ({direction, firstColor, lastColor}) => {
  const myStyle = {
                     background: `linear-gradient(${direction},${firstColor},${lastColor})`
                 }

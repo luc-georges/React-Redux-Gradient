@@ -17,7 +17,8 @@ const reducer = (state = stateInitial, action = {}) => {
     case ARROW_DIRECTION:
       return {
         ...state,
-        arrow: action.value
+        arrow: action.arrow
+        
       };
     case TO_DIRECTION:
       return {

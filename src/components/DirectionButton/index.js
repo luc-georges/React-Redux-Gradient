@@ -1,21 +1,22 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { toDirection, arrowDirection } from '../../store/actions';
 
 
-const DirectionButton = (props) => {
-  const dispatch = useDispatch();
+
+const DirectionButton = ({toDirection,arrows, arrowDirection, directionId, textDirection}) => {
+
+  
+
   return (
   <button 
   className="button" 
-  id={props.directionId}
+  id={directionId}
   onClick={()=>{
-      dispatch(toDirection(props.directionId))
-      dispatch(arrowDirection(props.arrow))
+    arrowDirection(arrows);
+    toDirection(directionId);
   }} 
   >
-    {props.textDirection}
+    {textDirection}
   </button>
   )
 };

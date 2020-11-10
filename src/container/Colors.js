@@ -1,10 +1,13 @@
-import { connect } from 'react-redux';
+import  {connect}  from 'react-redux';
 import Colors from '../components/Colors'
 
 const mapStateToProps = (state) =>({
     direction: state.direction,
     firstColor: state.firstColor,
-    lastColor: state.lastColor
-})
+    lastColor: state.lastColor,
+    arrow: state.arrow
+});
 
-export default connect(mapStateToProps, null)(Colors);
+const mapDispatchToProps = null
+
+export default connect(mapStateToProps, mapDispatchToProps)(Colors);
