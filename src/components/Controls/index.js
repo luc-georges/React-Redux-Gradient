@@ -4,7 +4,7 @@ import React from 'react';
 
 const Controls = ({randFirst, randLast, direction}) => {
 
-  if(direction == '90deg' ||direction =='45deg' ||direction =='135deg' ){
+  if(direction <= 135 ){
     return  <div className="buttons group">
       
     <button

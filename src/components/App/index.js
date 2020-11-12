@@ -24,12 +24,12 @@ const App = () => (
     <Gradient />
 
     <div className="buttons group">
-      <DirectionButton textDirection='to right' directionId ='90deg'  arrows='→'  />
-      <DirectionButton textDirection='45deg' directionId ='45deg'  arrows='↗' />
-      <DirectionButton textDirection='135 deg' directionId ='135deg' arrows='↘' />
-      <DirectionButton textDirection='225 deg' directionId ='225deg' arrows='↙' />
-      <DirectionButton textDirection='315deg' directionId ='315deg' arrows='↖'  />
-      <DirectionButton textDirection='to left' directionId ='275deg' arrows='←' />
+      <DirectionButton textDirection='to right' directionId ={90}  arrows='→'  />
+      <DirectionButton textDirection='45deg' directionId ={45}  arrows='↗' />
+      <DirectionButton textDirection='135 deg' directionId ={135} arrows='↘' />
+      <DirectionButton textDirection='225 deg' directionId ={225} arrows='↙' />
+      <DirectionButton textDirection='315deg' directionId ={315} arrows='↖'  />
+      <DirectionButton textDirection='to left' directionId ={275} arrows='←' />
     </div>
     <ColorsCSS />
   </div>

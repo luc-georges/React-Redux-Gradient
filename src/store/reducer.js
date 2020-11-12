@@ -5,7 +5,7 @@ import { RAND_FIRST, RAND_LAST, TO_DIRECTION,ARROW_DIRECTION } from './actions';
 const stateInitial = {
   firstColor: '#e367a4',
   lastColor: '#48b1f3',
-  direction: '90deg',
+  direction: 90,
   arrow:'→',
   nbColors: 0,
 };
